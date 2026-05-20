@@ -130,3 +130,21 @@ export const blockedSchedules = [
     motivo: "Consulta médica"
   }
 ];
+
+/*
+  Funcionários cadastrados no sistema.
+*/
+
+export const employees = [
+  {
+    id: 1,
+    nome: "Carlos",
+    funcao: "Barbeiro"
+  },
+
+  {
+    id: 2,
+    nome: "Lucas",
+    funcao: "Barbeiro"
+  }
+];

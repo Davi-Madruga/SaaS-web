@@ -1,19 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import Login from "../pages/Login";
-
 import ClientLayout from "../layouts/ClientLayout";
 import ClientHome from "../pages/client/ClientHome";
 import NewAppointment from "../pages/client/NewAppointment";
-
 import BarberLayout from "../layouts/BarberLayout";
 import BarberDashboard from "../pages/barber/BarberDashboard";
-
 import AdminLayout from "../layouts/AdminLayout";
 import AdminDashboard from "../pages/admin/AdminDashboard";
 import MyAppointments from "../pages/client/MyAppointments";
 import AppointmentHistory from "../pages/client/AppointmentHistory";
 import BlockedSchedules from "../pages/barber/BlockedSchedules";
+import Employees from "../pages/admin/Employees";
 function AppRoutes() {
   return (
     <BrowserRouter>
@@ -35,6 +32,7 @@ function AppRoutes() {
         
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<AdminDashboard />} />
+          <Route path="funcionarios" element={<Employees />} />
         </Route>
       </Routes>
     </BrowserRouter>

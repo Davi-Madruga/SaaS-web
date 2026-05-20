@@ -1,12 +1,29 @@
+import Header from "../../components/Header";
+
+/*
+  Dashboard principal do administrador.
+*/
+
 function AdminDashboard() {
   return (
     <section>
-      <h1>Painel Administrativo</h1>
 
-      <p>
-        Aqui o dono poderá gerenciar funcionários,
-        preços e horários.
-      </p>
+      <Header
+        title="Painel Administrativo"
+        subtitle="Gerencie as configurações da barbearia."
+      />
+
+      <div className="welcome-card">
+
+        <h2>Área administrativa</h2>
+
+        <p>
+          Aqui o dono pode controlar funcionários,
+          horários e valores dos serviços.
+        </p>
+
+      </div>
+
     </section>
   );
 }
