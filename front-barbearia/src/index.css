@@ -275,3 +275,28 @@ button {
   background: #374151;
   border-radius: 8px;
 }
+
+/* Ações disponíveis para o barbeiro */
+
+.barber-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.barber-actions button {
+  padding: 10px 14px;
+
+  border-radius: 8px;
+
+  font-weight: bold;
+}
+
+.barber-actions button:first-child {
+  background-color: #059669;
+  color: white;
+}
+
+.barber-actions button:last-child {
+  background-color: #dc2626;
+  color: white;
+}

@@ -93,3 +93,27 @@ export const historyAppointments = [
     total: 35
   }
 ];
+
+/*
+  Agendamentos visíveis para o barbeiro.
+*/
+
+export const barberAppointments = [
+  {
+    id: 1,
+    cliente: "Matheus",
+    horario: "09:00",
+    data: "21/05/2026",
+    servico: "Corte",
+    status: "Confirmado"
+  },
+
+  {
+    id: 2,
+    cliente: "Lucas",
+    horario: "11:00",
+    data: "21/05/2026",
+    servico: "Barba",
+    status: "Confirmado"
+  }
+];
