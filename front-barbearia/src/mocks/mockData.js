@@ -18,6 +18,9 @@ export const barbers = [
   }
 ];
 
+/*
+  Serviços oferecidos pela barbearia.
+*/
 export const services = [
   {
     id: 1,

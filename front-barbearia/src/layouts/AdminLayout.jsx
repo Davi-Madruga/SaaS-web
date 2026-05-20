@@ -12,6 +12,11 @@ function AdminLayout() {
       path: "/admin/funcionarios",
       label: "Funcionários"
     },
+
+    {
+      path: "/admin/servicos",
+      label: "Serviços"
+    },
     
     {
       path: "/",
