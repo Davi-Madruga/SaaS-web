@@ -300,3 +300,37 @@ button {
   background-color: #dc2626;
   color: white;
 }
+
+/* Formulário de bloqueio */
+
+.block-form {
+  margin-bottom: 32px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.block-form input {
+  flex: 1;
+  min-width: 200px;
+
+  padding: 12px;
+
+  border-radius: 8px;
+  border: none;
+
+  background-color: #1f2937;
+  color: white;
+}
+
+.block-form button {
+  padding: 12px 18px;
+
+  border-radius: 8px;
+
+  background-color: #d4a373;
+  color: #111827;
+
+  font-weight: bold;
+}

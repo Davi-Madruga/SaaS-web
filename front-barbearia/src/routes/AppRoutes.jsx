@@ -13,6 +13,7 @@ import AdminLayout from "../layouts/AdminLayout";
 import AdminDashboard from "../pages/admin/AdminDashboard";
 import MyAppointments from "../pages/client/MyAppointments";
 import AppointmentHistory from "../pages/client/AppointmentHistory";
+import BlockedSchedules from "../pages/barber/BlockedSchedules";
 function AppRoutes() {
   return (
     <BrowserRouter>
@@ -29,6 +30,7 @@ function AppRoutes() {
 
         <Route path="/barbeiro" element={<BarberLayout />}>
           <Route index element={<BarberDashboard />} />
+          <Route path="bloqueios" element={<BlockedSchedules />} />
         </Route>
         
         <Route path="/admin" element={<AdminLayout />}>

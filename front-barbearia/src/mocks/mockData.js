@@ -117,3 +117,16 @@ export const barberAppointments = [
     status: "Confirmado"
   }
 ];
+
+/*
+  Horários bloqueados pelo barbeiro.
+*/
+
+export const blockedSchedules = [
+  {
+    id: 1,
+    data: "22/05/2026",
+    horario: "08:00",
+    motivo: "Consulta médica"
+  }
+];

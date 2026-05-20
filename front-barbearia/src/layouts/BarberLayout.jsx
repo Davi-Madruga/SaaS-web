@@ -7,7 +7,10 @@ function BarberLayout() {
       path: "/barbeiro",
       label: "Dashboard"
     },
-
+      {
+        path: "/barbeiro/bloqueios",
+        label: "Bloqueios"
+      },
     {
       path: "/",
       label: "Sair"
