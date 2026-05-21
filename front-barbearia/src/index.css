@@ -334,3 +334,18 @@ button {
 
   font-weight: bold;
 }
+
+/* Select com o mesmo estilo dos inputs */
+
+.block-form select {
+  flex: 1;
+  min-width: 200px;
+
+  padding: 12px;
+
+  border-radius: 8px;
+  border: none;
+
+  background-color: #1f2937;
+  color: white;
+}

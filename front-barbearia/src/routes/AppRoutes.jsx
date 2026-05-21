@@ -12,6 +12,7 @@ import AppointmentHistory from "../pages/client/AppointmentHistory";
 import BlockedSchedules from "../pages/barber/BlockedSchedules";
 import Employees from "../pages/admin/Employees";
 import ServicePrices from "../pages/admin/ServicePrices";
+import BusinessHours from "../pages/admin/BusinessHours";
 function AppRoutes() {
   return (
     <BrowserRouter>
@@ -35,6 +36,7 @@ function AppRoutes() {
           <Route index element={<AdminDashboard />} />
           <Route path="funcionarios" element={<Employees />} />
           <Route path="servicos" element={<ServicePrices />} />
+          <Route path="horarios" element={<BusinessHours />} />
         </Route>
       </Routes>
     </BrowserRouter>

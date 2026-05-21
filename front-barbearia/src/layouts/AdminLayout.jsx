@@ -19,6 +19,11 @@ function AdminLayout() {
     },
     
     {
+      path: "/admin/horarios",
+      label: "Horários"
+    },
+    
+    {
       path: "/",
       label: "Sair"
     }

@@ -151,3 +151,23 @@ export const employees = [
     funcao: "Barbeiro"
   }
 ];
+
+/*
+  Horários de funcionamento da barbearia.
+*/
+
+export const businessHours = [
+  {
+    id: 1,
+    dia: "Segunda-feira",
+    abertura: "08:00",
+    fechamento: "18:00"
+  },
+
+  {
+    id: 2,
+    dia: "Terça-feira",
+    abertura: "08:00",
+    fechamento: "18:00"
+  }
+];
