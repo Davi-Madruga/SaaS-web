@@ -68,10 +68,13 @@ button {
   display: flex;
 
   min-height: 100vh;
+
+  background-color: #111827;
 }
 
 .sidebar {
-  width: 240px;
+  width: 260px;
+  min-height: 100vh;
 
   padding: 24px;
 
@@ -79,7 +82,7 @@ button {
 
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .sidebar h2 {
@@ -100,6 +103,8 @@ button {
   flex: 1;
 
   padding: 32px;
+
+  overflow-y: auto;
 }
 .appointment-section {
   margin-top: 32px;
@@ -348,4 +353,65 @@ button {
 
   background-color: #1f2937;
   color: white;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sidebar h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .block-form {
+    flex-direction: column;
+  }
+
+  .block-form input,
+  .block-form select,
+  .block-form button {
+    width: 100%;
+  }
+
+  .barber-actions {
+    flex-direction: column;
+  }
+
+  .barber-actions button {
+    width: 100%;
+  }
+
+  .summary-card button,
+  .appointment-card button {
+    width: 100%;
+  }
+
+  .page-header h1 {
+    font-size: 26px;
+  }
+
 }
