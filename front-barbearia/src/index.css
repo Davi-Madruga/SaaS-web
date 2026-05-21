@@ -415,3 +415,13 @@ button {
   }
 
 }
+
+/* Horário bloqueado */
+
+.card.blocked {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+
+  border-color: #dc2626;
+}

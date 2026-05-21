@@ -2,6 +2,7 @@ import { useState } from "react";
 import { barbers, services, horarios } from "../../mocks/mockData";
 import ServiceCard from "../../components/ServiceCard";
 import Header from "../../components/Header";
+import { blockedSchedules } from "../../mocks/mockData";
 function NewAppointment() {
   const [barberSelected, setBarberSelected] = useState(null);
   const [serviceSelected, setServiceSelected] = useState([]);
@@ -19,9 +20,28 @@ function NewAppointment() {
     }
   }
 
-  function handleConfirm() {
-    alert("Agendamento confirmado com sucesso!");
+  /*
+  Valida e confirma o agendamento.
+*/
+
+function handleConfirm() {
+
+  // Verifica se o horário está bloqueado
+  const blocked = blockedSchedules.find(
+    (schedule) =>
+      schedule.horario === horarioSelected
+  );
+
+  if (blocked) {
+    alert(
+      "Esse horário está bloqueado pelo barbeiro."
+    );
+
+    return;
   }
+
+  alert("Agendamento confirmado com sucesso!");
+}
 
   return (
     <section>
@@ -50,15 +70,46 @@ function NewAppointment() {
         <h2>Escolha o horário</h2>
 
         <div className="cards-grid">
-          {horarios.map((horario) => (
-            <ServiceCard
-               key={horario}
-               title={horario}
-               subtitle="Disponível"
-              selected={horarioSelected === horario}
-              onClick={() => setHorarioSelected(horario)}
-            />
-          ))}
+         {horarios.map((horario) => {
+
+  // Verifica se o horário está bloqueado
+  const blocked =
+    blockedSchedules.find(
+      (schedule) =>
+        schedule.horario === horario
+    );
+
+  return (
+
+    <button
+      key={horario}
+
+      disabled={blocked}
+
+      className={
+        horarioSelected === horario
+          ? "card selected"
+          : blocked
+          ? "card blocked"
+          : "card"
+      }
+
+      onClick={() =>
+        setHorarioSelected(horario)
+      }
+    >
+
+      <strong>{horario}</strong>
+
+      <span>
+        {blocked
+          ? "Indisponível"
+          : "Disponível"}
+      </span>
+
+    </button>
+  );
+})}
         </div>
       </div>
 
