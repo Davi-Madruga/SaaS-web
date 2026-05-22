@@ -1,36 +1,37 @@
-/*
-  Configuração base da API.
-  Futuramente será usada para conectar
-  o frontend com o backend Java.
-*/
-
-const API_URL =
-  "http://localhost:8080";
+import axios from "axios";
 
 /*
-  Função genérica para requisições.
+  Instância principal da API.
 */
 
-export async function request(
-  endpoint,
-  options = {}
-) {
+export const api = axios.create({
 
-  const response = await fetch(
-    `${API_URL}${endpoint}`,
-    {
-      headers: {
-        "Content-Type":
-          "application/json"
-      },
+  baseURL:
+    "http://localhost:8080",
 
-      ...options
+  headers: {
+    "Content-Type":
+      "application/json"
+  }
+});
+
+/*
+  Adiciona token automaticamente
+  nas requisições autenticadas.
+*/
+
+api.interceptors.request.use(
+  (config) => {
+
+    const token =
+      localStorage.getItem("token");
+
+    if (token) {
+
+      config.headers.Authorization =
+        `Bearer ${token}`;
     }
-  );
 
-  // Converte resposta para JSON
-  const data =
-    await response.json();
-
-  return data;
-}
+    return config;
+  }
+);
