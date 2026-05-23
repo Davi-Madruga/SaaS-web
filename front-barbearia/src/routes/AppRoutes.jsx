@@ -13,6 +13,9 @@ import BlockedSchedules from "../pages/barber/BlockedSchedules";
 import Employees from "../pages/admin/Employees";
 import ServicePrices from "../pages/admin/ServicePrices";
 import BusinessHours from "../pages/admin/BusinessHours";
+import {
+  AuthContext
+} from "../context/AuthContext";
 function AppRoutes() {
   return (
     <BrowserRouter>

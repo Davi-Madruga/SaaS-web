@@ -1,37 +1,14 @@
 import axios from "axios";
 
 /*
-  Instância principal da API.
+  Configuração principal
+  da API Django.
 */
 
-export const api = axios.create({
+const api = axios.create({
 
   baseURL:
-    "http://localhost:8080",
-
-  headers: {
-    "Content-Type":
-      "application/json"
-  }
+    "http://127.0.0.1:8000/api",
 });
 
-/*
-  Adiciona token automaticamente
-  nas requisições autenticadas.
-*/
-
-api.interceptors.request.use(
-  (config) => {
-
-    const token =
-      localStorage.getItem("token");
-
-    if (token) {
-
-      config.headers.Authorization =
-        `Bearer ${token}`;
-    }
-
-    return config;
-  }
-);
+export default api;
