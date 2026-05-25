@@ -38,9 +38,10 @@ export const perfisService = {
     return response.data;
   },
 
+  // ✅ CORRIGIDO: agora usa rota correta do backend
   async listarBarbeiros() {
-    const perfis = await this.listar();
-    return perfis.filter((perfil) => perfil.tipo === 'barbeiro');
+    const response = await httpClient.get('/api/barbeiros/');
+    return normalizeList(response.data);
   },
 
   async listarClientes() {
