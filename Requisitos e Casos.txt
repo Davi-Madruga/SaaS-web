@@ -1,0 +1,91 @@
+	REQUISITOS FUNCIONAIS
+Aqui está a lista de requisitos funcionais atualizada, incluindo as referências e dependências entre eles para refletir a lógica do sistema e do diagrama.
+REQUISITOS FUNCIONAIS
+
+    RF01 | Realizar Agendamento: O sistema deve permitir que o cliente realize o agendamento de um serviço. RF02, RF09, RF10, RF11, RF13
+
+    RF02 | Escolher Barbeiro: O sistema deve obrigar a seleção de um barbeiro específico no momento da criação do agendamento. RF01
+
+    RF03 | Visualizar Agendamento: O sistema deve permitir que o cliente visualize os detalhes dos seus agendamentos marcados. RF01
+
+    RF04 | Consultar Histórico de Atendimentos: O sistema deve permitir, opcionalmente, que o cliente visualize serviços realizados anteriormente. RF03
+
+    RF05 | Cancelar Agendamento: O sistema deve permitir que o cliente cancele um horário previamente agendado. RF03, RF12
+
+    RF06 | Editar Agendamentos: O sistema deve permitir que o barbeiro altere informações de agendamentos já existentes. RF01
+
+    RF07 | Gerenciar Bloqueios de Agenda: O sistema deve permitir que o barbeiro bloqueie horários ou datas específicas para impedir novos agendamentos. RF10
+
+    RF08 | Gerenciar Cadastro de Funcionários: O sistema deve permitir que o dono cadastre, edite ou remova barbeiros e outros colaboradores.
+
+    RF09 | Gerenciar Valores do Serviço: O sistema deve permitir que o dono configure e altere os preços cobrados por cada tipo de serviço oferecido.
+
+    RF10 | Gerenciar Horário de Funcionamento: O sistema deve permitir que o dono defina os horários de abertura e fechamento da barbearia.
+
+    RF11 | Visualizar Tabela de Preços: O sistema deve exibir claramente os valores de cada serviço ao cliente durante o processo de seleção no agendamento. RF01, RF09
+
+    RF12 | Validar Prazo de Cancelamento: O sistema deve impedir que o cliente cancele o agendamento caso o tempo restante para o serviço seja inferior a 24 horas. RF05
+
+    RF13 | Consultar Valor Total: O sistema deve somar e exibir o valor total dos serviços selecionados antes da confirmação final do agendamento pelo cliente. RF01, RF11
+
+	REQUISITOS NÃO FUNCIONAIS
+RNF01 | Facilidade de uso [Usabilidade]: Implementado com tecnologias que promovem uma fácil utilização do sistema através de um WEB Browser e Internet, garantindo uma interface intuitiva para clientes e barbeiros. RF01, RF03, RF07
+
+RNF02 | Segurança da Informação [Segurança]: O sistema deve garantir que cada nível de usuário (Cliente, Barbeiro, Dono) acesse apenas as funcionalidades permitidas, protegendo os dados sensíveis de agendamento e faturamento. RF01, RF05, RF06, RF08, RF09
+
+RNF03 | Eficiência de Navegação [Usabilidade]: O sistema deve ser projetado para que o cliente consiga concluir um agendamento completo partindo da tela inicial com, no máximo, 5 cliques. RF01, RF02, RF11
+
+RNF04 | Compatibilidade de Navegador [Portabilidade]: A aplicação deve ser compatível com as versões mais recentes dos navegadores Google Chrome, Mozilla Firefox e Safari. RNF01
+
+RNF05 | Tratamento de Erros [Robustez]: O sistema deve exibir mensagens de erro amigáveis ao usuário em vez de códigos de exceção técnicos. RF01, RF05, RF12
+
+	CASOS DE USO
+Caso de Uso: (RF01) Realizar Agendamento.
+Atores: Cliente.
+Descrição: Este procedimento consiste em permitir que o cliente solicite a reserva de um serviço na barbearia, escolhendo uma data e horário disponíveis no sistema.
+Referência: RF01.
+
+Caso de Uso: (RF02) Escolher Barbeiro.
+Atores: Cliente.
+Descrição: Este procedimento é uma etapa obrigatória do agendamento onde o cliente deve selecionar qual profissional deseja que realize o serviço.
+Referência: RF02 (Include de RF01).
+
+Caso de Uso: (RF03) Visualizar Agendamento.
+Atores: Cliente.
+Descrição: Este procedimento permite que o cliente consulte as informações detalhadas de agendamentos que ele já possui marcados no sistema.
+Referência: RF03.
+
+Caso de Uso: (RF04) Consultar Histórico de Atendimentos.
+Atores: Cliente.
+Descrição: Este procedimento permite que o cliente visualize opcionalmente o registro de serviços que já foram concluídos em visitas passadas.
+Referência: RF04 (Extend de RF03).
+
+Caso de Uso: (RF05) Cancelar Agendamento.
+Atores: Cliente.
+Descrição: Este procedimento consiste na exclusão de um agendamento futuro por parte do cliente, respeitando a regra de antecedência mínima de 24 horas.
+Referência: RF05.
+
+Caso de Uso: (RF06) Editar Agendamentos.
+Atores: Barbeiro.
+Descrição: Este procedimento permite que o profissional barbeiro altere detalhes de um agendamento, como horário ou tipo de serviço, conforme necessidade técnica ou do cliente.
+Referência: RF06.
+
+Caso de Uso: (RF07) Gerenciar Bloqueios de Agenda.
+Atores: Barbeiro.
+Descrição: Este procedimento consiste em permitir que o barbeiro desabilite horários específicos em sua agenda para que não fiquem disponíveis para reserva por clientes.
+Referência: RF07.
+
+Caso de Uso: (RF08) Gerenciar Cadastro de Funcionários.
+Atores: Dono.
+Descrição: Este procedimento permite ao proprietário realizar a manutenção (inclusão, alteração ou exclusão) dos dados dos profissionais que trabalham na barbearia.
+Referência: RF08.
+
+Caso de Uso: (RF09) Gerenciar Valores do Serviço.
+Atores: Dono.
+Descrição: Este procedimento consiste na configuração e atualização dos preços cobrados por cada categoria de corte ou serviço oferecido no estabelecimento.
+Referência: RF09.
+
+Caso de Uso: (RF10) Gerenciar Horário de Funcionamento.
+Atores: Dono.
+Descrição: Este procedimento permite ao administrador definir os turnos de abertura e fechamento da barbearia, refletindo na disponibilidade geral da agenda.
+Referência: RF10.
