@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { AppLayout } from './components/layout/AppLayout.jsx';
 import { ProtectedRoute } from './routes/ProtectedRoute.jsx';
 import { LoginPage } from './pages/auth/LoginPage.jsx';
@@ -13,22 +13,22 @@ import { ServicesAdminPage } from './pages/admin/ServicesAdminPage.jsx';
 import { EmployeesAdminPage } from './pages/admin/EmployeesAdminPage.jsx';
 import { BusinessHoursPage } from './pages/admin/BusinessHoursPage.jsx';
 import { NotFoundPage } from './pages/NotFoundPage.jsx';
+import { HomePage } from './pages/HomePage.jsx';
 
 export function App() {
   return (
     <Routes>
+      <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/cadastro" element={<RegisterPage />} />
 
       <Route
-        path="/"
         element={
           <ProtectedRoute>
             <AppLayout />
           </ProtectedRoute>
         }
       >
-        <Route index element={<Navigate to="/dashboard" replace />} />
         <Route path="dashboard" element={<DashboardPage />} />
 
         <Route

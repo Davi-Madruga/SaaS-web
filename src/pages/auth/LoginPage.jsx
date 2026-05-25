@@ -37,14 +37,13 @@ export function LoginPage() {
         <div className="auth-intro">
           <span>Barbearia Academy</span>
           <h1>Acesse sua conta</h1>
-          <p>Entre como cliente, barbeiro ou dono para acessar suas funcionalidades.</p>
         </div>
 
         <Alert type="error">{error}</Alert>
 
         <form onSubmit={handleSubmit} className="form">
           <label>
-            Email ou usuário
+            Email
             <input name="login" value={form.login} onChange={updateField} required />
           </label>
           <label>
