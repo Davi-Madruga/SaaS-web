@@ -33,6 +33,10 @@ POST   /api/clientes/
 POST   /api/token/
 POST   /api/token/refresh/
 GET    /api/perfis/
+GET    /api/perfis/:id/
+PATCH  /api/perfis/:id/
+POST   /api/usuario/             # criação de barbeiro pelo admin
+PATCH  /api/usuario/:id/         # atualização de nome, telefone, email e senha do barbeiro
 GET    /api/servicos/
 POST   /api/servicos/
 PATCH  /api/servicos/:id/
@@ -99,4 +103,4 @@ CORS_ALLOWED_ORIGINS = [
 
 ## Observação sobre funcionalidades sem endpoint
 
-Os requisitos falam sobre bloqueio de agenda, cadastro de funcionários e horário de funcionamento. Este front já tem telas para essas áreas, mas as ações que não existem nos fontes do backend ficam em modo visual/preparado. O código conectado de verdade usa os recursos existentes no backend atual: clientes, perfis, serviços, autenticação e agendamentos.
+Os requisitos falam sobre bloqueio de agenda, cadastro de barbeiros, clientes e horário de funcionamento. O front já tem telas para essas áreas. Listagem, detalhamento e atualização simples de perfis usam `/api/perfis/`. A criação e a atualização completa de barbeiros usam `/api/usuario/`, porque é necessário criar/alterar o `Usuario` junto com o `Perfil`.

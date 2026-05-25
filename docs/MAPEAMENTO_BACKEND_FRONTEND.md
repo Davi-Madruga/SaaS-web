@@ -52,7 +52,10 @@ Endpoint esperado:
 
 ```txt
 GET /api/perfis/
+GET /api/perfis/:id/
 PATCH /api/perfis/:id/
+POST /api/usuario/
+PATCH /api/usuario/:id/
 ```
 
 Campos esperados:
@@ -125,8 +128,8 @@ O cliente não é enviado porque o backend define pelo token JWT em `perform_cre
 - Tela separada por perfil do usuário.
 - Cliente acessa agendamento, meus agendamentos e histórico.
 - Barbeiro acessa agenda e bloqueios.
-- Admin acessa serviços, funcionários, horários e agenda geral.
-- A criação de funcionários e horários fica preparada para endpoints futuros, porque os fontes enviados só trazem cadastro de clientes e atualização de perfil.
+- Admin acessa serviços, barbeiros, clientes, horários e agenda geral.
+- A página de barbeiros cria usuário em `POST /api/usuario/` e atualiza email/senha em `PATCH /api/usuario/:id/`. A listagem e o detalhamento continuam usando `GET /api/perfis/` e `GET /api/perfis/:id/`.
 - Cancelamento valida 24 horas no front antes de chamar o backend.
 
 A regra de 24 horas também deve ficar no backend, porque validação apenas no front pode ser burlada.

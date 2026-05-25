@@ -481,6 +481,50 @@ tr:last-child td {
   }
 }
 
+.section-space {
+  margin-top: 18px;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: 18px;
+  align-items: start;
+}
+
+.detail-card {
+  position: sticky;
+  top: 96px;
+}
+
+.detail-card h2,
+.card h2 {
+  margin-top: 0;
+}
+
+.detail-list {
+  display: grid;
+  gap: 12px;
+}
+
+.detail-list span {
+  display: grid;
+  gap: 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.detail-list strong {
+  color: var(--text);
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+
+.muted-text {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 @media (max-width: 980px) {
   .app-shell {
     grid-template-columns: 1fr;
@@ -500,6 +544,7 @@ tr:last-child td {
   .appointment-grid,
   .two-columns,
   .three-columns,
+  .admin-grid,
   .appointment-form {
     grid-template-columns: 1fr;
   }

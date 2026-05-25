@@ -13,7 +13,8 @@ const cardsByRole = {
     { title: 'Bloqueios de agenda', text: 'Reserve horários indisponíveis para clientes.', to: '/bloqueios' }
   ],
   admin: [
-    { title: 'Gerenciar funcionários', text: 'Cadastre e atualize barbeiros e colaboradores.', to: '/funcionarios' },
+    { title: 'Gerenciar barbeiros', text: 'Cadastre, detalhe e atualize barbeiros.', to: '/barbeiros' },
+    { title: 'Clientes', text: 'Liste, detalhe e atualize clientes.', to: '/clientes' },
     { title: 'Gerenciar serviços', text: 'Cadastre serviços, valores e duração.', to: '/servicos' },
     { title: 'Horário de funcionamento', text: 'Defina abertura e fechamento da barbearia.', to: '/horarios' },
     { title: 'Agenda geral', text: 'Acompanhe todos os agendamentos.', to: '/agenda-barbeiro' }

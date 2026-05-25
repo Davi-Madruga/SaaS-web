@@ -11,6 +11,7 @@ import { BarberSchedulePage } from './pages/barber/BarberSchedulePage.jsx';
 import { BarberBlocksPage } from './pages/barber/BarberBlocksPage.jsx';
 import { ServicesAdminPage } from './pages/admin/ServicesAdminPage.jsx';
 import { EmployeesAdminPage } from './pages/admin/EmployeesAdminPage.jsx';
+import { ClientProfilesAdminPage } from './pages/admin/ClientProfilesAdminPage.jsx';
 import { BusinessHoursPage } from './pages/admin/BusinessHoursPage.jsx';
 import { NotFoundPage } from './pages/NotFoundPage.jsx';
 import { HomePage } from './pages/HomePage.jsx';
@@ -82,10 +83,19 @@ export function App() {
           }
         />
         <Route
-          path="funcionarios"
+          path="barbeiros"
           element={
             <ProtectedRoute allowedRoles={["admin"]}>
               <EmployeesAdminPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="clientes"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <ClientProfilesAdminPage />
             </ProtectedRoute>
           }
         />

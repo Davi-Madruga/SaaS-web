@@ -45,8 +45,7 @@ export function RegisterPage() {
       <section className="auth-card wide">
         <div className="auth-intro">
           <span>Barbearia Academy</span>
-          <h1>Criar cadastro</h1>
-          <p>Cadastro padrão de cliente para realizar agendamentos.</p>
+          <h1>Criar conta</h1>
         </div>
 
         <Alert type="error">{error}</Alert>

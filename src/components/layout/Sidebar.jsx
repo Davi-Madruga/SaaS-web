@@ -17,7 +17,8 @@ const menus = {
   admin: [
     { to: '/dashboard', label: 'Início' },
     { to: '/servicos', label: 'Serviços e preços' },
-    { to: '/funcionarios', label: 'Funcionários' },
+    { to: '/barbeiros', label: 'Barbeiros' },
+    { to: '/clientes', label: 'Clientes' },
     { to: '/horarios', label: 'Horário de funcionamento' },
     { to: '/agenda-barbeiro', label: 'Agenda geral' },
     { to: '/meus-agendamentos', label: 'Agendamentos' }

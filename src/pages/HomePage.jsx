@@ -19,10 +19,10 @@ export function HomePage() {
 
           <div className="home-actions">
             <Link className="primary-button" to="/login">
-              Entrar no sistema
+              Entrar
             </Link>
             <Link className="secondary-button" to="/cadastro">
-              Criar cadastro
+              Criar conta
             </Link>
           </div>
         </div>
@@ -38,7 +38,7 @@ export function HomePage() {
           </div>
           <div className="home-card floating-card card-three">
             <strong>Gestão completa</strong>
-            <span>Serviços, funcionários e horários.</span>
+            <span>Serviços, barbeiros e horários.</span>
           </div>
         </div>
       </section>

@@ -6,6 +6,7 @@ export const env = {
     token: import.meta.env.VITE_TOKEN_ENDPOINT || '/api/token/',
     tokenRefresh: import.meta.env.VITE_TOKEN_REFRESH_ENDPOINT || '/api/token/refresh/',
     perfis: import.meta.env.VITE_PERFIS_ENDPOINT || '/api/perfis/',
+    usuarios: import.meta.env.VITE_USUARIOS_ENDPOINT || '/api/usuario/',
     servicos: import.meta.env.VITE_SERVICOS_ENDPOINT || '/api/servicos/',
     agendamentos: import.meta.env.VITE_AGENDAMENTOS_ENDPOINT || '/api/agendamentos/'
   }

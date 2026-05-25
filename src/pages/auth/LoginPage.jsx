@@ -56,7 +56,7 @@ export function LoginPage() {
         </form>
 
         <p className="auth-footer">
-          Ainda não tem conta? <Link to="/cadastro">Criar cadastro</Link>
+          Ainda não tem conta? <Link to="/cadastro">Criar conta</Link>
         </p>
       </section>
     </main>
