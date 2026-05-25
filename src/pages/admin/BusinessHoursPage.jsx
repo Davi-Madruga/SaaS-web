@@ -27,12 +27,9 @@ export function BusinessHoursPage() {
     <>
       <PageHeader
         title="Horário de funcionamento"
-        description="Tela preparada para RF10. Conecte ao backend quando o endpoint de horários existir."
+        
       />
 
-      <Alert>
-        Esta tela salva apenas no estado do React nesta versão, porque o backend de referência ainda não possui endpoint de horário de funcionamento.
-      </Alert>
 
       <div className="table-card">
         <table>

@@ -75,7 +75,7 @@ export function ClientProfilesAdminPage() {
     <>
       <PageHeader
         title="Clientes"
-        description="Liste, detalhe e atualize os clientes cadastrados."
+        
       />
 
       <Alert type="error">{error}</Alert>
@@ -126,9 +126,7 @@ export function ClientProfilesAdminPage() {
                         <button type="button" className="secondary-button" onClick={() => openDetails(perfil)}>
                           Detalhar
                         </button>
-                        <button type="button" className="secondary-button" onClick={() => startEdit(perfil)}>
-                          Atualizar
-                        </button>
+                        
                       </div>
                     </td>
                   </tr>

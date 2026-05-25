@@ -47,7 +47,7 @@ export function MyAppointmentsPage() {
     <>
       <PageHeader
         title="Meus agendamentos"
-        description="Visualize seus horários e cancele quando a regra de 24 horas permitir."
+        
       />
 
       <Alert type="error">{error}</Alert>

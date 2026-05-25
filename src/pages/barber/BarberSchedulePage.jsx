@@ -50,7 +50,7 @@ export function BarberSchedulePage() {
 
   return (
     <>
-      <PageHeader title="Agenda" description="Visualize e edite agendamentos existentes." />
+      <PageHeader title="Agenda" />
       <Alert type="error">{error}</Alert>
       <Alert type="success">{success}</Alert>
 

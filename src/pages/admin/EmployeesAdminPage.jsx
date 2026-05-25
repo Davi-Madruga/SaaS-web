@@ -143,7 +143,7 @@ export function EmployeesAdminPage() {
     <>
       <PageHeader
         title="Gerenciar barbeiros"
-        description="Cadastre barbeiros, visualize detalhes e atualize dados de acesso e contato."
+        
       />
 
       <Alert type="error">{error}</Alert>
